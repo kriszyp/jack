@@ -88,7 +88,7 @@ var timer, queue;
 // the timer thread is only used for queuing
 function setTimeout(callback, delay){
     timer = timer || new java.util.Timer("JavaScript timer thread", true);
-    queue = queue || require("event-queue");
+    queue = queue || require("event-loop");
     
     timer.schedule(new java.util.TimerTask({
         run: function(){

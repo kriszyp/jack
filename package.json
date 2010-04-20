@@ -25,5 +25,12 @@
             "package.json"
         ]
     },
-    "version": "0.2.4"
+	"overlay": {
+		"node": {
+			"mappings": {
+				"uri": "url",
+			}
+		}
+	},	
+    "version": "0.3.0"
 }

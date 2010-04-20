@@ -28,7 +28,7 @@
 	"overlay": {
 		"node": {
 			"mappings": {
-				"uri": "url",
+				"uri": "url"
 			}
 		}
 	},	

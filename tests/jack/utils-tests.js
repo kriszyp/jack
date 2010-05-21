@@ -183,7 +183,7 @@ function fixture(file, contentType) {
     return {
         "CONTENT_TYPE": contentType,
         "CONTENT_LENGTH": length.toString(10),
-        "jsgi.input": new ByteIO(data)
+        "jsgi.body": new ByteIO(data)
     };
 }
 

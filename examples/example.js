@@ -111,9 +111,10 @@ map["/cookie"] = function(request) {
 }
 
 map["/info"] = function(request) {
-    var res = new Jack.Response(200, { "content-type" : "text/plain" });
+    var req = new Jack.Request(request),
+        res = new Jack.Response(200, { "content-type" : "text/plain" });
     
-    var params = Jack.Request(request).params();
+    var params = req.params();
     
     res.write("========================= params =========================\n");
     
@@ -138,4 +139,4 @@ map["/examples"] = Jack.Directory(".");
 // middleware:
 
 // apply the URLMap
-exports.app = Jack.ContentLength(Jack.URLMap(map));
+exports.app = Jack.URLMap(map);

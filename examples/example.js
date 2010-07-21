@@ -111,7 +111,7 @@ map["/cookie"] = function(request) {
 }
 
 map["/info"] = function(request) {
-    var res = new Jack.Response(200, { "Content-Type" : "text/plain" });
+    var res = new Jack.Response(200, { "content-type" : "text/plain" });
     
     var params = Jack.Request(request).params();
     

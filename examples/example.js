@@ -20,7 +20,7 @@ map["/httproulette"] = function(env) {
     
     return {
         status : 200,
-        headers : {"Content-Type":"text/html"},
+        headers : {"content-type":"text/html"},
         body : ['whew!<br /><a href="httproulette">try again</a>']
     };
 }
@@ -111,10 +111,9 @@ map["/cookie"] = function(request) {
 }
 
 map["/info"] = function(request) {
-    var req = new Jack.Request(request),
-        res = new Jack.Response(200, { "Content-Type" : "text/plain" });
+    var res = new Jack.Response(200, { "Content-Type" : "text/plain" });
     
-    var params = req.params();
+    var params = Jack.Request(request).params();
     
     res.write("========================= params =========================\n");
     

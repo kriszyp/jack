@@ -13,6 +13,7 @@
         "Antti Holvikari",
         "Tim Schaub"
     ],
+    "name": "jack",
     "dependencies": [
         "narwhal"
     ],
